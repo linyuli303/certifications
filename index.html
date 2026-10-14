@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Professional learning and course completion certificates in data engineering, machine learning, and analytics."><title>Certifications · Yuli Lin</title>
+<style>
+:root{color-scheme:light;--ink:#20242b;--muted:#717780;--line:#e9ebee;--link:#2b587b}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}main{max-width:920px;margin:0 auto;padding:32px 28px 45px}a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}.back{font-size:12px;color:var(--muted)}h1{font-size:29px;letter-spacing:-.8px;margin:12px 0 3px;font-weight:700}.intro{margin:0 0 22px;color:var(--muted);font-size:13px}.summary{font-size:11px;color:var(--muted);margin-bottom:17px}.group{margin:16px 0 0}.group h2{font-size:13px;font-weight:700;margin:0 0 6px;padding-bottom:7px;border-bottom:1px solid var(--line)}.entry{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:7px 0;border-bottom:1px solid #f2f3f4}.name{font-weight:550;font-size:13px;line-height:1.3}.meta{font-size:11px;color:var(--muted);margin-top:2px}.links{display:flex;gap:14px;white-space:nowrap;font-size:12px;flex-shrink:0}footer{margin-top:24px;font-size:11px;color:var(--muted)}@media(max-width:580px){main{padding:23px 17px 35px}h1{font-size:26px}.entry{align-items:flex-start;gap:8px}.links{flex-direction:column;align-items:flex-end;gap:3px;font-size:11px}.name{font-size:12.5px}}
+</style></head><body><main><a class="back" href="https://github.com/linyuli303">← GitHub profile</a><h1>Certifications</h1><p class="intro">Selected completed courses and specializations across data, AI, analytics and software development.</p><div class="summary" id="count"></div><div id="certificates"></div><footer>Yuli Lin · <a href="https://github.com/linyuli303">GitHub</a></footer></main>
+<script>
+const certificates = [
+  {
+    "title": "Machine Learning A-Z [2026]: ML, DL, AI with AWS, Python & R",
+    "date": "2026-10-07",
+    "category": "Machine Learning & AI",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-05c32684-eb40-4680-adee-b29dcad9ae7f/",
+    "pdf": "certificates/machine-learning-a-z-2026-ml-dl-ai-with-aws-python-r.pdf"
+  },
+  {
+    "title": "dbt on Databricks",
+    "date": "2026-09-25",
+    "category": "Databases & Data Engineering",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-dbb0994c-2459-4eb5-9ea6-1a5fddbcbabb/",
+    "pdf": "certificates/dbt-on-databricks.pdf"
+  },
+  {
+    "title": "CI/CD with Databricks (Declarative Automation Bundles)",
+    "date": "2026-09-21",
+    "category": "Cloud & DevOps",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-cd6d1102-afc6-4c56-973c-605cd5efc52f/",
+    "pdf": "certificates/ci-cd-with-databricks-declarative-automation-bundles.pdf"
+  },
+  {
+    "title": "Azure Databricks and Spark SQL (Python)",
+    "date": "2026-09-20",
+    "category": "Databases & Data Engineering",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-44a937db-8fbb-4d61-ba65-3bdc60c25852/",
+    "pdf": "certificates/azure-databricks-and-spark-sql-python.pdf"
+  },
+  {
+    "title": "AI for Good",
+    "date": "2023-12-12",
+    "category": "Machine Learning & AI",
+    "issuer": "Coursera",
+    "url": null,
+    "pdf": "certificates/ai-for-good.pdf"
+  },
+  {
+    "title": "Complete Guide to TensorFlow for Deep Learning with Python",
+    "date": "2023-03-16",
+    "category": "Machine Learning & AI",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-de3fad23-b057-40d6-b333-86df462b4ed4/",
+    "pdf": "certificates/complete-guide-to-tensorflow-for-deep-learning-with-python.pdf"
+  },
+  {
+    "title": "NLP - Natural Language Processing with Python",
+    "date": "2023-03-15",
+    "category": "Machine Learning & AI",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-fa7c500d-4bd6-406f-af7b-47abc976b277/",
+    "pdf": "certificates/nlp-natural-language-processing-with-python.pdf"
+  },
+  {
+    "title": "Microsoft Power Pivot (Excel) and SSAS (Tabular DAX model)",
+    "date": "2020-04-25",
+    "category": "Data Analytics & BI",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-a09764bc-b48a-4bf2-ace5-0f95d4eedbd3/",
+    "pdf": "certificates/microsoft-power-pivot-excel-and-ssas-tabular-dax-model.pdf"
+  },
+  {
+    "title": "Microsoft Power BI: Up & Running With Power BI Desktop",
+    "date": "2020-04-24",
+    "category": "Data Analytics & BI",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-2f935d4f-c757-4a25-a077-43382f71c86d/",
+    "pdf": "certificates/microsoft-power-bi-up-running-with-power-bi-desktop.pdf"
+  },
+  {
+    "title": "Complete Python Bootcamp: Go from Zero to Hero in Python 3",
+    "date": "2020-03-30",
+    "category": "Python & Software Development",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-1fa1159e-50cc-469f-bab3-44b9d83cdcd3/",
+    "pdf": "certificates/complete-python-bootcamp-go-from-zero-to-hero-in-python-3.pdf"
+  },
+  {
+    "title": "Automate the Boring Stuff with Python Programming",
+    "date": "2020-03-30",
+    "category": "Python & Software Development",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-17dfeb6e-1fbf-478b-ad90-96823daf352e/",
+    "pdf": "certificates/automate-the-boring-stuff-with-python-programming.pdf"
+  },
+  {
+    "title": "Python for Financial Analysis and Algorithmic Trading",
+    "date": "2020-02-10",
+    "category": "Python & Software Development",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-ea20fdc4-b6b4-45d6-8788-12f6be1da9fd/",
+    "pdf": "certificates/python-for-financial-analysis-and-algorithmic-trading.pdf"
+  },
+  {
+    "title": "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert",
+    "date": "2020-01-26",
+    "category": "Databases & Data Engineering",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-IYY0UL58/",
+    "pdf": "certificates/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert.pdf"
+  },
+  {
+    "title": "Data Science A-Z: Real-Life Data Science Exercises Included",
+    "date": "2020-01-01",
+    "category": "Machine Learning & AI",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-SXE302XL/",
+    "pdf": "certificates/data-science-a-z-real-life-data-science-exercises-included.pdf"
+  },
+  {
+    "title": "Python A-Z: Python For Data Science With Real Exercises!",
+    "date": "2019-12-20",
+    "category": "Python & Software Development",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-Y5ARX44R/",
+    "pdf": "certificates/python-a-z-python-for-data-science-with-real-exercises.pdf"
+  },
+  {
+    "title": "Tableau Expert: Top Visualization Techniques in Tableau 10",
+    "date": "2019-12-15",
+    "category": "Data Analytics & BI",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-WM7XIEOX/",
+    "pdf": "certificates/tableau-expert-top-visualization-techniques-in-tableau-10.pdf"
+  },
+  {
+    "title": "Tableau 10 Advanced Training: Master Tableau in Data Science",
+    "date": "2019-12-06",
+    "category": "Data Analytics & BI",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-M288S8G1/",
+    "pdf": "certificates/tableau-10-advanced-training-master-tableau-in-data-science.pdf"
+  },
+  {
+    "title": "Tableau 10 A-Z: Hands-On Tableau Training For Data Science!",
+    "date": "2019-11-28",
+    "category": "Data Analytics & BI",
+    "issuer": "Udemy",
+    "url": "https://www.udemy.com/certificate/UC-MJR8TSW2/",
+    "pdf": "certificates/tableau-10-a-z-hands-on-tableau-training-for-data-science.pdf"
+  }
+];
+const categories = ["Machine Learning & AI", "Databases & Data Engineering", "Cloud & DevOps", "Python & Software Development", "Data Analytics & BI"];
+const container=document.getElementById('certificates');
+document.getElementById('count').textContent=`${certificates.length} completed certificates · Udemy & Coursera`;
+const formatDate=date=>new Date(date+'T12:00:00').toLocaleDateString('en-US',{month:'short',year:'numeric'});
+for(const category of categories){const entries=certificates.filter(c=>c.category===category);if(!entries.length)continue;
+const section=document.createElement('section');section.className='group';const h=document.createElement('h2');h.textContent=category;section.append(h);
+for(const c of entries){const row=document.createElement('div');row.className='entry';const info=document.createElement('div');const name=document.createElement('div');name.className='name';name.textContent=c.title;const meta=document.createElement('div');meta.className='meta';meta.textContent=`${c.issuer} · ${formatDate(c.date)}`;info.append(name,meta);const links=document.createElement('div');links.className='links';
+const link=(label,url)=>{const a=document.createElement('a');a.textContent=label;a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;};
+if(c.url)links.append(link('Verify ↗',c.url));links.append(link('PDF ↗',c.pdf));row.append(info,links);section.append(row);}
+container.append(section);}
+</script></body></html>
