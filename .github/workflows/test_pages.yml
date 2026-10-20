@@ -1,0 +1,23 @@
+name: Test Github Pages
+
+on:
+    push:
+        branches:
+            - addNew
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Upload Pages Artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                path: .
+                
