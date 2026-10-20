@@ -3,7 +3,7 @@ name: Test Github Pages
 on:
     push:
         branches:
-            -addNew
+            - addNew
     workflow_dispatch:
 
 permissions:
@@ -17,7 +17,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Upload Pages Artifact
-              uses: action/upload-pages-artifact@v3
+              uses: action/upload-pages-artifacts@v3
               with:
                 path: .
                 
